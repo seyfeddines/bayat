@@ -48,7 +48,7 @@ class BayatAPP extends StatelessWidget {
             Locale('en'), // English
             Locale('ar'), // Arabic
           ],
-          home: CvApply(),
+          home: HomePagePresentation(),
 
         );
       },

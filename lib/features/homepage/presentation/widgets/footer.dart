@@ -1,70 +1,78 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class buildFooter extends StatelessWidget {
-
+class BuildFooter extends StatelessWidget {
+  const BuildFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return  Container(
-      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+    // الحصول على أبعاد الشاشة
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    // ضبط حجم الخط بحسب حجم الشاشة
+    double titleFontSize = screenWidth > 800 ? 24 : 18;
+    double textFontSize = screenWidth > 800 ? 16 : 14;
+    double verticalPadding = screenWidth > 800 ? 40 : 20;
+    double horizontalPadding = screenWidth > 800 ? 20 : 10;
+
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(
+        vertical: verticalPadding,
+        horizontal: horizontalPadding,
+      ),
       color: Colors.blue.shade900,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'InnovateTech Solutions',
-            style: const TextStyle(
-              fontSize: 24,
+            'Bayat Carting',
+            style: TextStyle(
+              fontSize: titleFontSize,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: verticalPadding / 2),
           Text(
-            '© 2025 InnovateTech. All rights reserved.',
+            '© 2025 Bayat. All rights reserved.',
             style: TextStyle(
-              fontSize: 16,
+              fontSize: textFontSize,
               color: Colors.white70,
             ),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 20),
-          Wrap(
-            spacing: 20,
-            children: [
-              MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Privacy Policy',
-                    style: TextStyle(color: Colors.white70),
-                  ),
-                ),
-              ),
-              MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Terms of Service',
-                    style: TextStyle(color: Colors.white70),
-                  ),
-                ),
-              ),
-              MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Contact Us',
-                    style: TextStyle(color: Colors.white70),
-                  ),
-                ),
-              ),
-            ],
+          SizedBox(height: verticalPadding / 2),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              // إذا الشاشة ضيقة، أظهر الأزرار في عمود
+              bool isMobile = constraints.maxWidth < 600;
+              return Wrap(
+                spacing: 20,
+                runSpacing: 10,
+                alignment: WrapAlignment.center,
+                direction: isMobile ? Axis.vertical : Axis.horizontal,
+                children: [
+                  _footerButton('Privacy Policy'),
+                  _footerButton('Terms of Service'),
+                  _footerButton('Contact Us'),
+                ],
+              );
+            },
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _footerButton(String text) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          text,
+          style: const TextStyle(color: Colors.white70),
+        ),
       ),
     );
   }

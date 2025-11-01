@@ -29,29 +29,29 @@ Widget buildPortfolioSection(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'E-Commerce Platform'),
+                'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Corporate Plated Meals'),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'Mobile App'),
+                'https://images.unsplash.com/photo-1600891964594-f61ba0e24090?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Meal Prep for Offices'),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'AI Solution'),
+                'https://images.unsplash.com/photo-1600891964591-f61ba0e24091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Custom Catering Menus'),
           ],
         )
             : Column(
           children: [
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'E-Commerce Platform'),
+                'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Corporate Plated Meals'),
             const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'Mobile App'),
+                'https://images.unsplash.com/photo-1600891964594-f61ba0e24090?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Meal Prep for Offices'),
             const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                'AI Solution'),
+                'https://images.unsplash.com/photo-1600891964591-f61ba0e24091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'Custom Catering Menus'),
           ],
         ),
       ],
@@ -113,6 +113,7 @@ Widget buildPortfolioItem(String imageUrl, String title) {
                 fontSize: 18,
                 color: Colors.grey.shade800,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
         ],

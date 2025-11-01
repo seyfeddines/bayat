@@ -1,3 +1,4 @@
+import 'package:bayat/features/cv_apply/presentation/pages/cv_apply.dart';
 import 'package:flutter/material.dart';
 
 class HeroSectionBayat extends StatelessWidget {
@@ -24,21 +25,6 @@ class HeroSectionBayat extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // شعار الشركة مع أنيميشن
-          TweenAnimationBuilder(
-            tween: Tween<double>(begin: 0.8, end: 1),
-            duration: const Duration(seconds: 2),
-            curve: Curves.elasticOut,
-            builder: (context, value, child) {
-              return Transform.scale(
-                scale: value,
-                child: child,
-              );
-            },
-            child: Image.asset(
-              "assets/images/bayat_logo.png", // ضع شعار شركتك هنا
-              height: isWide ? 140 : 100,
-            ),
-          ),
           const SizedBox(height: 30),
 
           // اسم الشركة مع حركة Fade + Slide
@@ -103,7 +89,12 @@ class HeroSectionBayat extends StatelessWidget {
               ),
               _buildAnimatedButton(
                 text: "انضم إلينا",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CvApply()),
+                  );
+                },
                 background: const Color(0xFF003F5C),
                 foreground: Colors.white,
               ),

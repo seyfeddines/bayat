@@ -19,7 +19,7 @@ class HomepagePresentationWeb extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: Text(
-          'InnovateTech',
+          'Bayat',
           style: TextStyle(
             color: Colors.blue.shade900,
             fontWeight: FontWeight.bold,
@@ -28,9 +28,7 @@ class HomepagePresentationWeb extends StatelessWidget {
         ),
         actions: [
           buildNavButton(context, 'Home'),
-          buildNavButton(context, 'About'),
-          buildNavButton(context, 'Portfolio'),
-          buildNavButton(context, 'Contact'),
+
           const SizedBox(width: 20),
         ],
       ),
@@ -48,8 +46,8 @@ class HomepagePresentationWeb extends StatelessWidget {
             const SizedBox(height: 60),
             buildStatsSection(),
             const SizedBox(height: 80),
-            buildCTASection(),
-            buildFooter(),
+
+            BuildFooter(),
           ],
         ),
       ),
