@@ -31,11 +31,13 @@ Widget buildPortfolioSection(BuildContext context) {
             buildPortfolioItem(
                 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
                 'Corporate Plated Meals'),
+            const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1600891964594-f61ba0e24090?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'https://imgs.search.brave.com/iNTJTYbVUDJ0Rwg4mknVbbwq8kO69YVfQPCijrDXew8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zMy1t/ZWRpYTAuZmwueWVs/cGNkbi5jb20vYnBo/b3RvL2dOeUttbzRj/dTdIdTRVS0pMZDVF/dWcvbC5qcGc',
                 'Meal Prep for Offices'),
+            const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1600891964591-f61ba0e24091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'https://imgs.search.brave.com/A4JT53TiYLE_Hk3f1llLmizVq8XbL1tRUiiW-EGsW3A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2hlcmUtZS5j/b20vVW5pdGVkX1N0/YXRlcy9PaGlvL0Zy/YW5rbGluX0NvdW50/eV9Db3VudHkvUGxh/c18xM2VkNjRmNzY3/MjE1N2IzZmY0M2Uz/MmJjZTg5ZjBiNS5q/cGc',
                 'Custom Catering Menus'),
           ],
         )
@@ -46,11 +48,11 @@ Widget buildPortfolioSection(BuildContext context) {
                 'Corporate Plated Meals'),
             const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1600891964594-f61ba0e24090?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'https://imgs.search.brave.com/iNTJTYbVUDJ0Rwg4mknVbbwq8kO69YVfQPCijrDXew8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zMy1t/ZWRpYTAuZmwueWVs/cGNkbi5jb20vYnBo/b3RvL2dOeUttbzRj/dTdIdTRVS0pMZDVF/dWcvbC5qcGc',
                 'Meal Prep for Offices'),
             const SizedBox(height: 20),
             buildPortfolioItem(
-                'https://images.unsplash.com/photo-1600891964591-f61ba0e24091?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                'https://imgs.search.brave.com/A4JT53TiYLE_Hk3f1llLmizVq8XbL1tRUiiW-EGsW3A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2hlcmUtZS5j/b20vVW5pdGVkX1N0/YXRlcy9PaGlvL0Zy/YW5rbGluX0NvdW50/eV9Db3VudHkvUGxh/c18xM2VkNjRmNzY3/MjE1N2IzZmY0M2Uz/MmJjZTg5ZjBiNS5q/cGc',
                 'Custom Catering Menus'),
           ],
         ),
